@@ -10,16 +10,17 @@ function Card() {
     const [count2, setCount2] = useState(0)
 
     useEffect(() => {
-        //funciona como função componentDidUpdate()
+        //funciona como a função componentDidUpdate() só atualiza a DOM quando 
+        // a variavel de estado count2 é atualizada
         console.log(`Atualizou o componente, variavel de estado count2`)
     }, [count2])
 
     useEffect(() => {
-        //funciona  a função componentDidMount()
+        //funciona como a função componentDidMount()
         console.log('montagem do componente')
 
 
-        //funciona  a função componentWillUnMount()
+        //funciona como  a função componentWillUnMount()
         return () => {
             console.log('Desmontagem do componente')
         };
